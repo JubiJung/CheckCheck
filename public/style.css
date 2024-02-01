@@ -1,0 +1,490 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+
+:root {
+  --input--font-size: 12px;
+  --list--font-size: 12px;
+  --button-font-size: 12px;
+}
+
+* {
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+body {
+  text-align: center;
+  width: 50vw;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+li {
+  list-style: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.mainTitle {
+  text-align: center;
+  padding: 15px;
+  margin: auto;
+}
+
+.hidePage {
+  display: none;
+}
+
+#navBar {
+  margin: 10px;
+}
+
+.navMenu {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.navMenu li {
+  width: 50px;
+  padding: 10px;
+  margin: 0 10px;
+  border: 1px solid #efbbcf;
+  border-radius: 100%;
+}
+
+.clicked {
+  cursor: pointer;
+  background-color: #efbbcf;
+  font-weight: bold;
+  transition-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.navMenu li a {
+  text-decoration: none;
+  color: black;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+}
+
+.listContainer {
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin: 20px;
+  width: 300px;
+  height: 540px;
+}
+
+.helperGoal {
+  color: red;
+  font-size: 14px;
+  padding: 5px;
+  margin: 0 30px;
+  text-align: left;
+}
+
+.weekGoal {
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 10px;
+  height: 250px;
+}
+
+#goalInput {
+  width: 130px;
+  height: 20px;
+  border: none;
+  border-bottom: 1px solid grey;
+  font-size: var(--input--font-size);
+  font-weight: bold;
+}
+
+#goalInput:focus {
+  outline: none;
+  background-color: rgba(230, 229, 229, 0.507);
+}
+
+.goalAddBtn {
+  border: 1px solid #968c83;
+  border-radius: 5px;
+  background-color: white;
+  font-size: var(--button-font-size);
+  font-weight: 600;
+}
+
+.goalAddBtn:hover {
+  cursor: pointer;
+  transition-duration: 0.3s;
+  background-color: #968c83;
+  color: white;
+}
+
+#goalList {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  height: 130px;
+  padding: 0px;
+  margin: 10px;
+}
+
+#goalList::-webkit-scrollbar {
+  display: none;
+}
+
+#goalList div {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+#goalList div li {
+  width: 100%;
+  height: 15px;
+  padding: 3px;
+  margin: 3px;
+  text-align: left;
+  background-color: #faf0e6a1;
+  border-radius: 6px;
+  text-decoration-color: rgba(194, 6, 22, 0.658);
+  text-decoration-style: double;
+  text-decoration-thickness: 1px;
+  font-size: var(--list--font-size);
+  font-weight: bold;
+}
+
+#goalList div img {
+  margin: auto;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+}
+
+#goalList div button:hover {
+  transform: scale(1.2);
+  transition-duration: 0.15s;
+}
+
+.divisionLine {
+  border-top: 1px solid grey;
+  margin: 10px;
+}
+
+.todos {
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 10px;
+  height: 250px;
+}
+
+#todoList {
+  height: 100px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#todoList::-webkit-scrollbar {
+  display: none;
+}
+
+.todoList {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  position: relative;
+}
+
+.hideMsg {
+  display: none;
+}
+
+.helperTodo {
+  color: red;
+  font-size: 14px;
+  padding: 5px;
+  text-align: left;
+  margin: 0 30px;
+}
+
+#todoInput {
+  width: 130px;
+  height: 20px;
+  border: none;
+  border-bottom: 1px solid grey;
+  font-size: var(--input--font-size);
+  font-weight: bold;
+}
+
+#todoInput:focus {
+  outline: none;
+  background-color: rgba(230, 229, 229, 0.507);
+}
+
+.todoAddBtn {
+  border: 1px solid #968c83;
+  border-radius: 5px;
+  background-color: white;
+  font-size: var(--button-font-size);
+  font-weight: 600;
+}
+
+.todoAddBtn:hover {
+  cursor: pointer;
+  transition-duration: 0.3s;
+  background-color: #968c83;
+  color: white;
+}
+
+#todoList {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  height: 110px;
+  padding: 10px;
+  margin: 10px;
+}
+
+#todoList div {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+#todoList div li {
+  width: 100%;
+  height: 15px;
+  padding: 3px;
+  margin: 3px;
+  text-align: left;
+  background-color: #faf0e6a1;
+  border-radius: 6px;
+  text-decoration-color: rgba(194, 6, 22, 0.658);
+  text-decoration-style: double;
+  text-decoration-thickness: 1.5px;
+  font-size: var(--list--font-size);
+  font-weight: bold;
+}
+
+#todoList div img {
+  margin: auto;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+}
+
+#todoList div button:hover {
+  transform: scale(1.2);
+  transition-duration: 0.15s;
+}
+
+.todoList input {
+  display: none;
+}
+
+.todoList label {
+  cursor: pointer;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+
+.todoList input[type="checkbox"] + label::before {
+  margin: auto;
+  display: inline-block;
+  content: "";
+  width: 11px;
+  height: 11px;
+  border: 1.5px solid rgba(143, 143, 143, 0.712);
+  border-radius: 100%;
+}
+
+.todoList input[type="checkbox"]:checked + label::before {
+  background: url("img/checkIcon.png");
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: center;
+  border: 1.5px solid #c6dce4;
+  background-color: #c6dce4;
+}
+
+.allTodoDeleteBtn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.allSelectBtn {
+  border: 1px solid #968c83;
+  border-radius: 5px;
+  background-color: white;
+  font-size: var(--button-font-size);
+  font-weight: 600;
+}
+
+.allSelectBtn:hover {
+  cursor: pointer;
+  transition-duration: 0.3s;
+  background-color: #968c83;
+  color: white;
+}
+
+.delSelectedListBtn {
+  border: 1px solid #968c83;
+  border-radius: 5px;
+  background-color: white;
+  font-size: var(--button-font-size);
+  font-weight: 600;
+}
+
+.delSelectedListBtn:hover {
+  cursor: pointer;
+  transition-duration: 0.3s;
+  background-color: #968c83;
+  color: white;
+}
+
+.stopWatch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 170px;
+  height: 70px;
+  margin: auto 20px;
+  padding: 20px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+#timer {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Nanum Gothic", sans-serif;
+  text-align: center;
+}
+
+#timer input {
+  width: 35px;
+  height: 20px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Nanum Gothic", sans-serif;
+  text-align: center;
+}
+
+#timer label {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#timer input[type="number"]::-webkit-outer-spin-button,
+#timer input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#timer input:focus {
+  outline: none;
+  background-color: rgba(230, 229, 229, 0.507);
+}
+
+.timerBtns {
+  margin: 5px;
+  padding: 2px;
+}
+
+.timerStartBtn,
+.timerStopBtn,
+.timerResetBtn {
+  border: 1px solid #968c83;
+  border-radius: 5px;
+  background-color: white;
+  font-size: var(--button-font-size);
+  font-weight: 600;
+}
+
+.timerStartBtn:hover,
+.timerStopBtn:hover,
+.timerResetBtn:hover {
+  cursor: pointer;
+  transition-duration: 0.3s;
+  background-color: #968c83;
+  color: white;
+}
+
+#stats {
+  justify-content: center;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.todayStudiedTime {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 5px;
+  margin: auto 20px;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 30px 10px;
+}
+
+#calendar {
+  user-select: none;
+  margin: 20px;
+}
+
+#calendarTitle {
+  vertical-align: middle;
+  font-weight: bold;
+  text-underline-offset: 2px;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: cornflowerblue;
+}
+
+.prevCalendar {
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.prevCalendar:hover {
+  background-color: #e6e6e6;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.nextCalendar {
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.nextCalendar:hover {
+  background-color: #e6e6e6;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+#calendar td {
+  width: 40px;
+  height: 40px;
+}
+
+#calendar tr:not(:first-child) {
+  font-size: 12px;
+}
+
+#calendar tr:first-child {
+  font-weight: bold;
+}
+
+#calendar td:nth-child(1) {
+  color: red;
+}

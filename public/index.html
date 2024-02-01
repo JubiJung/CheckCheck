@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Check Check</title>
+</head>
+
+<body>
+  <header id="navBar">
+    <h1 class="mainTitle">Check Check✔</h1>
+    <ul class="navMenu">
+      <li class="main clicked"><a href="#main" class="mainBtn">Main</a></li>
+      <li class="stats"><a href="#stats" class="statsBtn">통계</a></li>
+    </ul>
+  </header>
+  <main id="main">
+    <div class="listContainer">
+      <section class="weekGoal">
+        <h1>Weekday Plans</h1>
+        <form id="goalForm">
+          <div>
+            <input type="text" id="goalInput" name="goal"></input>
+            <button class="goalAddBtn">추가</button>
+            <div class="helperGoal hideMsg">한 주 계획을 적어주세요.</div>
+          </div>
+          <ul id="goalList">
+          </ul>
+        </form>
+      </section>
+      <div class="divisionLine"></div>
+      <section class="todos">
+        <h1>To Do List</h1>
+        <form id="todoForm">
+          <div>
+            <input type="text" value="" id="todoInput" name="todoInput"></input>
+            <button class="todoAddBtn">추가</button>
+            <div class="helperTodo hideMsg">해야 할 일을 적어주세요.</div>
+
+          </div>
+        </form>
+        <ul id="todoList">
+        </ul>
+        <div class="allTodoDeleteBtn">
+          <button class="allSelectBtn">All</button>
+          <button class="delSelectedListBtn">Delete</button>
+        </div>
+      </section>
+    </div>
+    <section class="stopWatch">
+      <div id="timer">
+        <input id="min" type="number" min="0" max="59" placeholder="25" value="25">
+        <label for="min">분</label>
+      </div>
+      <div class="timerBtns">
+        <button class="timerStartBtn">시작</button>
+        <button class="timerStopBtn">멈춤</button>
+        <button class="timerResetBtn">리셋</button>
+      </div>
+
+    </section>
+  </main>
+  <main id="stats" class="hidePage">
+    <div class="todayStudiedTime">오늘은 0분 집중했네요!</div>
+    <table id="calendar">
+      <caption>
+        <img class="prevCalendar" src="img/left.png" alt="">
+        <span id="calendarTitle">2023년 9월</span>
+        <img class="nextCalendar" src="img/right.png" alt="">
+      </caption>
+      <tr>
+        <td>일</td>
+        <td>월</td>
+        <td>화</td>
+        <td>수</td>
+        <td>목</td>
+        <td>금</td>
+        <td>토</td>
+      </tr>
+    </table>
+  </main>
+  <script src="js/page.js"></script>
+  <script src="js/goal.js"></script>
+  <script src="js/todo.js"></script>
+  <script src="js/timer.js"></script>
+  <script src="js/calendar.js"></script>
+
+</body>
+
+</html>

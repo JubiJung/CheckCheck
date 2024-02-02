@@ -6,7 +6,6 @@ const helperGoal = document.querySelector(".helperGoal");
 const emoji = ["💖", "🥰", "🤩", "👊", "🔥", "💥", "🚀", "💯"];
 let isCompletedGoal = false;
 let goals = [];
-//isonblur나 isfocusout등을 변수로 정해서 이용하는 것도 좋은 생각
 
 goalInput.addEventListener("focusout", () => {
   helperGoal.classList.add("hideMsg");

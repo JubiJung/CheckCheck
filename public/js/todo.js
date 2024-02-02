@@ -8,8 +8,6 @@ const input = document.createElement("input");
 let todos = [];
 let isCompleted = false;
 
-//isonblur나 isfocusout등을 변수로 정해서 이용하는 것도 좋은 생각
-
 todoInput.addEventListener("focusout", () => {
   helperTodo.classList.add("hideMsg");
   todoInput.style.borderBottom = "1px solid grey";

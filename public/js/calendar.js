@@ -22,7 +22,7 @@ const buildCalendar = () => {
     calendar.deleteRow(calendar.rows.length - 1);
   }
   row = calendar.insertRow();
-  for (i = 0; i < firstDate.getDay(); i++) {
+  for (let i = 0; i < firstDate.getDay(); i++) {
     cnt += 1;
     cell = row.insertCell();
   }
